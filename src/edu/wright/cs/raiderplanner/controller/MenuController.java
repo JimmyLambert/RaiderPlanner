@@ -1010,8 +1010,8 @@ public class MenuController implements Initializable {
 
 		mainContent.addRow(2, detailsBox);
 
-		Button b = new Button("Hello There");
-		mainContent.addRow(3, b);
+		Button b = new Button("Add Assignment");
+		mainContent.addRow(4, b);
 
 		// Assignments:
 		TableColumn<Assignment, String> nameColumn = new TableColumn<>("Assignment");
