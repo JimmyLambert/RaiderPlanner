@@ -1056,14 +1056,14 @@ public class MenuController implements Initializable {
 				mainContent.addRow(4, b);
 
 				        
-				//		EventHandler<ActionEvent> addButtonEvent = new EventHandler<ActionEvent>() { 
-				//			public void handle(ActionEvent e) 
-				//			{ 
-				//	Person tempPerson = new Person("Mr.", "Generic", false);
-				//	Assignment a = new Exam(10, tempPerson, tempPerson, tempPerson, 1, null, null);
-				//	list.add(a);
-				//			} 
-				//		}; 
+						EventHandler<ActionEvent> addButtonEvent = new EventHandler<ActionEvent>() { 
+							public void handle(ActionEvent e) 
+							{ 
+					Person tempPerson = new Person("Mr.", "Generic", false);
+					Assignment a = new Exam(10, tempPerson, tempPerson, tempPerson, 1, null, null);
+					list.add(a);
+						} 
+						}; 
 				  
 						// when button is pressed 
 						//b.setOnAction(event); 
