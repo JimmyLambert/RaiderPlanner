@@ -37,6 +37,8 @@ import edu.wright.cs.raiderplanner.model.StudyProfile;
 import edu.wright.cs.raiderplanner.model.Task;
 import edu.wright.cs.raiderplanner.view.GanttishDiagram;
 import edu.wright.cs.raiderplanner.view.UiManager;
+import edu.wright.cs.raiderplanner.model.Person;
+import edu.wright.cs.raiderplanner.model.Assignment;
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
 import javafx.beans.binding.BooleanBinding;
@@ -1048,6 +1050,13 @@ public class MenuController implements Initializable {
 
 		ObservableList<Assignment> list = FXCollections
 				.observableArrayList(module.getAssignments());
+		
+//				public Assignment(int cweighting, Person csetBy, Person cmarkedBy,
+//				Person creviewedBy, int cmarks)
+				Person tempPerson = new Person("Mr.", "Generic", false);
+//			Assignment a = new Assignment(0, ;
+				//list.add(new Assignment[0]);
+			//Assignment tempAssignment = new Assignment(0, tempPerson, tempPerson, tempPerson, 0);
 
 		// Create a moduleContent:
 		TableView<Assignment> moduleContent = new TableView<>();
