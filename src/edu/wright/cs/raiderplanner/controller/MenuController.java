@@ -972,6 +972,8 @@ public class MenuController implements Initializable {
 		this.mainContent.getStyleClass().add("list-item");
 	}
 
+
+	ObservableList<Assignment> list;
 	/**
 	 * Display the Module pane.
 	 */
@@ -1013,8 +1015,7 @@ public class MenuController implements Initializable {
 
 		mainContent.addRow(2, detailsBox);
 
-		Button b = new Button("Add Assignment");
-		mainContent.addRow(4, b);
+
 
 		// Assignments:
 		TableColumn<Assignment, String> nameColumn = new TableColumn<>("Assignment");
@@ -1049,14 +1050,29 @@ public class MenuController implements Initializable {
 		ArrayList<TableColumn<Assignment, ?>> colList = new ArrayList<>(
 				Arrays.asList(nameColumn, deadlineColumn, weightingColumn));
 
-		ObservableList<Assignment> list = FXCollections
-				.observableArrayList(module.getAssignments());
+		list = FXCollections.observableArrayList(module.getAssignments());
 		
+				Button b = new Button("Add Assignment");
+				mainContent.addRow(4, b);
+
+				        
+				//		EventHandler<ActionEvent> addButtonEvent = new EventHandler<ActionEvent>() { 
+				//			public void handle(ActionEvent e) 
+				//			{ 
+				//	Person tempPerson = new Person("Mr.", "Generic", false);
+				//	Assignment a = new Exam(10, tempPerson, tempPerson, tempPerson, 1, null, null);
+				//	list.add(a);
+				//			} 
+				//		}; 
+				  
+						// when button is pressed 
+						//b.setOnAction(event); 
+
 //				public Assignment(int cweighting, Person csetBy, Person cmarkedBy,
 //				Person creviewedBy, int cmarks)
 				Person tempPerson = new Person("Mr.", "Generic", false);
-			Assignment a = new Exam(0, tempPerson, tempPerson, tempPerson, 0, null, null);
-				//list.add(new Assignment[0]);
+			Assignment a = new Exam(10, tempPerson, tempPerson, tempPerson, 1, null, null);
+				list.add(a);
 			//Assignment tempAssignment = new Assignment(0, tempPerson, tempPerson, tempPerson, 0);
 
 		// Create a moduleContent:
